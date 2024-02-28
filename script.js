@@ -36,7 +36,7 @@ Promise.all([
       }
       
       function loadLabeledImages() {
-        const labels = ['Black Widow', 'Captain America', 'Captain Marvel', 'Hawkeye', 'Jim Rhodes', 'Thor', 'Tony Stark']
+        const labels = ['Black Widow', 'Captain America', 'Glasses', 'Captain Marvel', 'Glasses', 'Hawkeye', 'Jim Rhodes', 'Thor', 'Tony Stark']
         return Promise.all(
           labels.map(async label => {
             const descriptions = []
@@ -46,7 +46,7 @@ Promise.all([
               descriptions.push(detections.descriptor)
             }
       
-            return new faceapi.LabeledFaceDescriptors(label, descriptions)
+            return new faceapi.LabeledFaceDescriptors(label, descriptions);
           })
         )
       }
